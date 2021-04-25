@@ -1,9 +1,11 @@
 
 export function fetchContracts(){
-
-//   fetch('http://localhost:3000/contracts')
-//   .then(response => response.json())
-//   .then(data => console.log(data))
-
-
+    return (dispatch) =>{
+        fetch('http://localhost:3000/contracts')
+        .then(response => response.json())
+        .then(contracts => dispatch({
+            type: 'FETCH_CONTRACTS',
+            payload: contracts
+        }))
+        }
 }

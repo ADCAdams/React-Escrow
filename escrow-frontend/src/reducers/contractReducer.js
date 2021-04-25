@@ -1,7 +1,10 @@
 export default function contractReducer(state = {contracts: []}, action){
 
-
-
-    return state
+    switch (action.type) {
+        case 'FETCH_ACCOUNTS':
+          return {contracts: action.payload}
+        default:
+            return state
+    }
 
 }
