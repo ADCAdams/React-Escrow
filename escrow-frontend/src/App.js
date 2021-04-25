@@ -1,12 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {fetchContracts} from './actions/fetchContracts'
 
 class App extends React.Component {
 
-  // componentDidMount(){
+  componentDidMount(){
   //   fetch('http://localhost:3000/contracts')
   //   .then(response => response.json())
   //   .then(data => console.log(data))
-  // }
+  }
 
 
   render(){
@@ -18,5 +20,5 @@ class App extends React.Component {
 }
 }
 
-export default App;
- 
+
+export default connect(null, {fetchContracts})(App);
