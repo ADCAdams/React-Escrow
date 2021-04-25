@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buyer_address: MyString
+  seller_address: MyString
+  buyer: MyString
+  seller: MyString
+  amount: 1.5
+  received: false
+  dispursed: false
+  purchase_object: MyString
+
+two:
+  buyer_address: MyString
+  seller_address: MyString
+  buyer: MyString
+  seller: MyString
+  amount: 1.5
+  received: false
+  dispursed: false
+  purchase_object: MyString
