@@ -6,11 +6,12 @@ const Contracts = (props) => {
 
     return (
         <div>
-            Contracts!!
+            Contracts Ledger:
+            <br/>
             {props.contracts.map(contract => 
             <ul>
-                <li>Buyer - {contract.buyer_address}</li>
-                <li>Seller - {contract.seller_address}</li>
+                <li>Buyer - {contract.buyer} - {contract.buyer_address}</li>
+                <li>Seller - {contract.seller} - {contract.seller_address}</li>
                 <li>Amount - {contract.amount}</li>
             </ul>
             )}

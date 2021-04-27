@@ -34,7 +34,7 @@ class ContractsController < ApplicationController
       private
   
       def contract_params
-        params.require(:contract).permit(:buyer_address, :seller_address, :amount)
+        params.require(:contract).permit(:buyer_address, :seller_address, :amount, :buyer, :seller, :purchase_object)
       end
 
 
