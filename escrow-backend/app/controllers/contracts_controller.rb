@@ -24,17 +24,17 @@ class ContractsController < ApplicationController
         @contract.destroy
       end
   
-    #   def update
-    #     @contract = Contract.find(params[:id])
-    #     @contract.update(name: params["contract"]["name"])
-    #     @contract.save
-    #     render json: @contract
-    #   end
+      def update
+        @contract = Contract.find(params[:id])
+        # @contract.update(name: params["contract"]["name"])
+        # @contract.save
+        render json: @contract
+      end
   
       private
   
       def contract_params
-        params.require(:contract).permit(:buyer_address, :seller_address, :amount, :buyer, :seller, :purchase_object)
+        params.require(:contract).permit(:buyer_address, :seller_address, :amount, :buyer, :seller, :purchase_object, :received, :dispursed)
       end
 
 

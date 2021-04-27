@@ -1,21 +1,25 @@
 import React from 'react'
+import '../CSS/contracts.css'
+// import Contract from 'Contract'
 
 const Contracts = (props) => {
 
-
-
     return (
-        <div>
+        <span className="contracts-index-span">
             Contracts Ledger:
             <br/>
             {props.contracts.map(contract => 
-            <ul>
-                <li>Buyer - {contract.buyer} - {contract.buyer_address}</li>
+            
+            <span key={contract.id} className="one-contract-index-span">
+                <ul key={contract.id}>
+            
+                <li>Buyer - {contract.buyer} - {contract.buyer_address} </li>
                 <li>Seller - {contract.seller} - {contract.seller_address}</li>
                 <li>Amount - {contract.amount}</li>
-            </ul>
+               </ul> 
+             </span>
             )}
-        </div>
+        </span>
             
     )
 }

@@ -13,16 +13,16 @@ class ContractsContainer extends React.Component {
     componentDidMount(){
         this.props.fetchContracts()
       }
-    
 
     render(){
 
         return(
-            <div>
+            <div className="ContractsContainerClass">
                 <NavBar/>
                 <Switch>
+                    <Route path='/'render={(routerProps) => <Contracts {...routerProps} contracts={this.props.contracts}/>}/>
+                    
                     <Route path='/contracts/new' component={NewContractForm}/>
-
                     <Route path='/contracts' render={(routerProps) => <Contracts {...routerProps} contracts={this.props.contracts}/>}/>
                 </Switch>
 

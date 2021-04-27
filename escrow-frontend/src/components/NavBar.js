@@ -7,6 +7,8 @@ const NavBar = (props) => {
     <div>
       <Link to='/contracts' style={{paddingRight: '20px'}}>Contracts  </Link>
       <Link to='/contracts/new'> New Contract</Link>
+      <br/>
+      <br/>
     </div>
 
   )
