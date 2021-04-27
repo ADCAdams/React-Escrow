@@ -428,3 +428,46 @@ Processing by ContractsController#index as */*
 Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 1009)
 
 
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContract Create (3.3ms)[0m  [1m[32mINSERT INTO "contracts" ("buyer_address", "seller_address", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["buyer_address", "12345"], ["seller_address", "3434343"], ["amount", 4.0], ["created_at", "2021-04-27 01:10:13.920782"], ["updated_at", "2021-04-27 01:10:13.920782"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" ORDER BY "contracts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/contracts" for ::1 at 2021-04-26 21:10:37 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 1.8ms | Allocations: 9507)
+
+
+Started GET "/contracts" for ::1 at 2021-04-26 21:34:26 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 1206)
+
+
+Started GET "/contracts" for ::1 at 2021-04-26 21:49:10 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 1206)
+
+
+Started POST "/contracts" for ::1 at 2021-04-26 21:52:49 -0400
+Processing by ContractsController#create as JSON
+  Parameters: {"buyer"=>"Buyer1", "seller"=>"Seller1", "buyer_addres"=>"", "seller_address"=>"8989899", "amount"=>"15", "buyer_address"=>"666666", "contract"=>{"buyer_address"=>"666666", "seller_address"=>"8989899", "buyer"=>"Buyer1", "seller"=>"Seller1", "amount"=>"15"}}
+[31mUnpermitted parameters: :buyer, :seller[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contracts_controller.rb:10:in `create'
+  [1m[36mContract Create (1.7ms)[0m  [1m[32mINSERT INTO "contracts" ("buyer_address", "seller_address", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["buyer_address", "666666"], ["seller_address", "8989899"], ["amount", 15.0], ["created_at", "2021-04-27 01:52:49.541992"], ["updated_at", "2021-04-27 01:52:49.541992"]]
+  ↳ app/controllers/contracts_controller.rb:10:in `create'
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contracts_controller.rb:10:in `create'
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 17.6ms | Allocations: 3167)
+
+

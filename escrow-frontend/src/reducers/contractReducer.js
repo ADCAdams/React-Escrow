@@ -6,6 +6,9 @@ export default function contractReducer(state = {contracts: []}, action){
         case 'FETCH_CONTRACTS':
 
           return {contracts: action.payload}
+
+        case 'ADD_CONTRACT':
+          return {...state, contracts: [...state.contracts, action.payload]}
         default:
             return state
     }
