@@ -1,12 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
 import {Route, Switch} from 'react-router-dom'
 
 import {fetchContracts} from '../actions/fetchContracts'
-import NewContractForm from '../components/NewContractForm'
 
+import NewContractForm from '../components/NewContractForm'
 import Contracts from '../components/Contracts'
+import NavBar from '../components/NavBar'
 
 class ContractsContainer extends React.Component {
 
@@ -19,6 +19,7 @@ class ContractsContainer extends React.Component {
 
         return(
             <div>
+                <NavBar/>
                 <Switch>
                     <Route path='/contracts/new' component={NewContractForm}/>
 
