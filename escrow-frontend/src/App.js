@@ -1,22 +1,22 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {fetchContracts} from './actions/fetchContracts'
+
+import ContractsContainer from './containers/ContractsContainer'
 
 class App extends React.Component {
 
-  componentDidMount(){
-    this.props.fetchContracts({type: 'FETCH_CONTRACTS'})
-  }
-
+  
 
   render(){
   return (
     <div className="App">
-      ContractsContainer
+      <ContractsContainer contracts = {this.props.contracts}/>
     </div>
   );
 }
 }
 
 
-export default connect(null, {fetchContracts})(App);
+
+
+
+export default App;

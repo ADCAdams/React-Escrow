@@ -1,7 +1,9 @@
+//import React from 'react'
+
 export default function contractReducer(state = {contracts: []}, action){
-    debugger;
+  
     switch (action.type) {
-        case 'FETCH_ACCOUNTS':
+        case 'FETCH_CONTRACTS':
 
           return {contracts: action.payload}
         default:
