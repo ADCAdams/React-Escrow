@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+import {Route, Switch} from 'react-router-dom'
+
 import {fetchContracts} from '../actions/fetchContracts'
 import NewContractForm from '../components/NewContractForm'
 
@@ -17,11 +19,13 @@ class ContractsContainer extends React.Component {
 
         return(
             <div>
-                <NewContractForm/>
-                <Contracts contracts={this.props.contracts}/>
+                <Switch>
+                    <Route path='/contracts/new' component={NewContractForm}/>
+
+                    <Route path='/contracts' render={(routerProps) => <Contracts {...routerProps} contracts={this.props.contracts}/>}/>
+                </Switch>
 
             </div>
-
 
         )
     }
