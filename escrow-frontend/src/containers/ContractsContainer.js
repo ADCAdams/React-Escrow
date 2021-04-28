@@ -15,14 +15,21 @@ class ContractsContainer extends React.Component {
         this.props.fetchContracts()
       }
 
-    render(){
+      getContractById(id, contracts){
+        return contracts.find(contract => contract.id === id)
+       
+      }
 
+      
+
+    render(){
+            console.log(this.props.contracts)
         return(
             <div>
                 <NavBar/>
                 <Switch>
                     <Route path='/contracts/new' component={NewContractForm}/>
-                    <Route path='/contracts/:id' render={(routerProps) => <Contract {...routerProps} contracts = {this.props.contracts}/>}/>
+                    <Route path='/contracts/:id' render={(routerProps) => <Contract {...routerProps} contract ={this.getContractById(routerProps.match.params.id,this.props.contracts)}/>}/>
                     <Route path='/contracts' render={(routerProps) => <Contracts {...routerProps} contracts={this.props.contracts}/>}/>
                 </Switch>
 

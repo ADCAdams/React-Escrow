@@ -34,7 +34,6 @@ class NewContractForm extends React.Component {
 
     return (
       <div>
-        <h1>hi</h1>
         <form onSubmit={this.handleSubmit}>
           <label>Buyer: </label>
           <input type='text' placeholder='Buyer Name' value={this.state.name} name="buyer" onChange={this.handleChange}/><br/>

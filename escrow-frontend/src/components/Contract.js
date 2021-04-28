@@ -2,15 +2,21 @@ import React from 'react'
 
 const Contract = (props) => {
 
-
-
-    return (
-        <div>
- 
-            HI!!!
-        </div>
-            
-    )
+    if(props.contract){
+        return (
+            <div>
+     
+                {props.contract.buyer_address}
+            </div>   
+        )
+    } else {
+        return(
+            <div>
+                
+            </div>
+        )
+        }
+    
 }
 
 export default Contract

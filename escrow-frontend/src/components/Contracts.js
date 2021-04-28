@@ -4,6 +4,7 @@ import '../CSS/contracts.css'
 
 const Contracts = (props) => {
 
+
     return (
         <span>
             Contracts Ledger:
