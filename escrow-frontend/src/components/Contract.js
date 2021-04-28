@@ -6,14 +6,11 @@ const Contract = (props) => {
 
     return (
         <div>
-            Contracts!!
-            {props.contracts.map(contract => 
-            <li>Buyer - {contract.buyer_address}</li>
-
-            )}
+ 
+            HI!!!
         </div>
             
     )
 }
 
-export default Contracts
+export default Contract

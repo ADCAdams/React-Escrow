@@ -5,7 +5,7 @@ import '../CSS/contracts.css'
 const Contracts = (props) => {
 
     return (
-        <span className="contracts-index-span">
+        <span>
             Contracts Ledger:
             <br/>
             {props.contracts.map(contract => 
@@ -13,9 +13,9 @@ const Contracts = (props) => {
             <span key={contract.id} className="one-contract-index-span">
                 <ul key={contract.id}>
             
-                <li>Buyer - {contract.buyer} - {contract.buyer_address} </li>
-                <li>Seller - {contract.seller} - {contract.seller_address}</li>
-                <li>Amount - {contract.amount}</li>
+                <li key={contract.buyer_address}>Buyer - {contract.buyer} - {contract.buyer_address} </li>
+                <li key={contract.seller_address}>Seller - {contract.seller} - {contract.seller_address}</li>
+                <li key={contract.amount}>Amount - {contract.amount}</li>
                </ul> 
              </span>
             )}
