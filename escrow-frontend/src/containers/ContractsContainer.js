@@ -33,7 +33,7 @@ class ContractsContainer extends React.Component {
                     <Route path='/contracts/new' component={NewContractForm}/>
                     <Route path='/contracts/:id' render={(routerProps) => <Contract {...routerProps} contracts={this.props.contracts}/>}/>
                     <Route path='/contracts' render={(routerProps) => <Contracts {...routerProps} contracts={this.props.contracts}/>}/>
-                    <Route path='/' component={Home}/>
+                    <Route exact path='/' component={Home}/>
                 </Switch>
 
             </div>
