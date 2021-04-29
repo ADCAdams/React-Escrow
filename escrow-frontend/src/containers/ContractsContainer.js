@@ -16,11 +16,11 @@ class ContractsContainer extends React.Component {
         this.props.fetchContracts()
       }
 
-    //   getContractById(id, contracts){
-        
-    //     return contracts.find(contract => contract.id === id)
+      getContractById(id){
+        debugger;
+        return this.props.contracts.find(contract => contract.id === parseInt(id))
        
-    //   }
+      }
 
       
 
