@@ -1642,3 +1642,25 @@ Processing by ContractsController#index as */*
 Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms | Allocations: 2155)
 
 
+Started GET "/contracts" for 127.0.0.1 at 2021-04-29 11:08:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 2168)
+
+
+Started GET "/contracts" for ::1 at 2021-04-29 11:08:35 -0400
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 73ms (Views: 70.4ms | ActiveRecord: 0.8ms | Allocations: 2141)
+
+
+Started GET "/contracts" for ::1 at 2021-04-29 11:08:39 -0400
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 2138)
+
+
