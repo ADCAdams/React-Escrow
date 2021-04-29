@@ -1853,3 +1853,34 @@ Processing by ContractsController#index as */*
 Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 2138)
 
 
+Started GET "/contracts" for ::1 at 2021-04-29 17:41:46 -0400
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 69ms (Views: 28.6ms | ActiveRecord: 1.9ms | Allocations: 10468)
+
+
+Started GET "/contracts" for ::1 at 2021-04-29 17:51:37 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (2.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 2.6ms | Allocations: 2179)
+
+
+Started GET "/contracts" for ::1 at 2021-04-29 17:52:10 -0400
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 2155)
+
+
+Started GET "/contracts" for ::1 at 2021-04-29 17:55:01 -0400
+Processing by ContractsController#index as */*
+  [1m[36mContract Load (0.2ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  ↳ app/controllers/contracts_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 2138)
+
+

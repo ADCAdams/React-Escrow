@@ -3,7 +3,8 @@ import React from 'react'
 const Contract = ({match, contracts}) => {
 
 
-    let contract = contracts[match.params.id]
+    let contract = contracts.find(contract => contract.id === parseInt(match.params.id))
+    debugger;
 
     
     if(contract){
@@ -13,7 +14,7 @@ const Contract = ({match, contracts}) => {
                     Contract ID: {contract.id}
                 <ul key={contract.id}>
             
-                <li key={contract.buyer_address}>Buyer - {contract.buyer} - {contracts[match.params.id].buyer_address} </li>
+                <li key={contract.buyer_address}>Buyer - {contract.buyer} - {contract.buyer_address} </li>
                 <li key={contract.seller_address}>Seller - {contract.seller} - {contract.seller_address}</li>
                 <li key={contract.amount}>Amount - {contract.amount}</li>
                </ul> 
